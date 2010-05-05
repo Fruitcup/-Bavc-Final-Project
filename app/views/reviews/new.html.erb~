@@ -10,7 +10,7 @@
 
   <p>
     <%= f.label :location %><br />
-    <%= f.select "location_id", Location.all.collet {|p| [ p.name, p.id ] }%>
+    <%= f.select "location_id", Location.all.collect {|p| [ p.name, p.id ] }%>
   </p>
 
   <p>

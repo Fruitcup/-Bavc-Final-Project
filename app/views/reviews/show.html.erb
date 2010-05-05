@@ -21,7 +21,8 @@
   <% @review.rating.times do %>
       &#9786
     <% end %>
-
+  <b>Map:</b>
+  <%= google_map(@review.location.address, :size => "100x100") %>
   <ul>
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>

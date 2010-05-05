@@ -9,6 +9,11 @@
   </p>
 
   <p>
+    <%= f.label :location %><br />
+    <%= f.select "location_id", Location.all.collect {|p| [ p.name, p.id ] }%>
+  </p> 
+
+  <p>
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>
